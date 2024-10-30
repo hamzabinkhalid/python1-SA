@@ -1,0 +1,48 @@
+Day 1 Quiz
+----------
+1. List some of the characteristics of Python.
+- It is interperated language
+- It follows snake_case
+- It is dynamically typed (t doesn't require for you to write type of variable before declaring or initializing it)
+- It is object oriented language
+- Easy to learn (its syntax is declerative rather than imperative like Java
+ 
+2. The Python interpreter can be executed in two ways. What are they?
+- REPL/Interactive
+- Script mode
+ 
+3. How should variables and functions be named in Python?
+- Should be named in snake_case
+- Not starting with numbers or specials
+- No reserved words
+- Meaningful names - clear wording
+ 
+4. What does a variable contain, and how should it (almost) always be declared?
+- A variable is a reference in the memory to hold some data
+- It should be initialised rather than declared (a = 2)
+ 
+5. Describe each part of the following statement:
+ 
+x = 12
+
+- x: reference/variable
+- =: assignment operator
+- 12: value to be assigned/stored in the variable, int type or integer literal
+- If immutable value on RHS already exists then it is reassigned using = to current reference (a = "Hello", b = "Hello") same 
+ 
+6. List 5 of the fundamental data types.
+- str, int, float, bool, dict, set, tuple, list
+ 
+7. How does one read from a list element?
+- By referencing the index of the element in list e.g. list[0]
+ 
+8. Name TWO falsey values (values that will convert to False when passed to a bool() wrapper function):
+- None, 0 and empty containers
+ 
+9. What value does the number 1 become when passed to a float() wrapper function?
+- 1.0
+ 
+11. What value does the string value "Hello" become when passed to a bool() wrapper function?
+- True
+- Even " " is true (space character)
+- Only empty strings "" are false

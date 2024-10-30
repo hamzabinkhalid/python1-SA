@@ -51,3 +51,75 @@ print(x)  # 1
 
 # with walrus
 print(y := 1)  # 2, assigns and returns in the same line
+
+# Increment and decrement operators do not exist in Python e.g. ++, --
+
+# Multiple assignment
+x, y, z = 1, 2, 3
+# better than x = 1, y = 2, z = 3
+print(x, y, z)  # 1 2 3
+
+# dict
+my_dict = {"name": "alan", "age": 2}
+name, age = my_dict["name"], my_dict["age"]
+# NOTE: square brackets notation for dict props
+print(name, age)  # alan 2
+
+# list
+my_nums = [1, 2, 3]
+first, second, third = my_nums[0], my_nums[1], my_nums[2]
+
+# assignment operator chaining (more specialised, avoid writing if possible)
+x = 1
+y = 1
+# may be rewritten as
+x = y = 1
+print(x, y)  # 1 1
+
+# comparison operators
+# ==, !=, >, <, >=, <=
+# is, tests for IDENTITY: reference the same object as the other
+# examples of comparison operators:
+print(1 == 1)  # True
+print(1 == 2)  # False
+print(1 != 1)  # False
+print(1 != 2)  # True
+print(1 > 1)  # False
+print(1 < 1)  # False
+print(1 >= 1)  # True
+print(1 <= 1)  # True
+print(1 >= 2)  # False
+print(1 <= 2)  # True
+# note: not is a keyword, not a function
+print(1 is 1)  # True
+print(1 is not 1)  # False
+
+# misc.
+x = y = 1
+print(x, y)
+y = 2
+print(x, y)
+
+my_list = [1, 2, 3]
+my_other_list = [1, 2, 3]
+my_copied_list = my_list
+print(my_list is my_other_list)  # False
+print(my_list is my_copied_list)  # True
+
+# the system python uses to determine if two variables reference the same object is built-in function id()
+print(id(my_list))  # 140732135058432
+print(id(my_copied_list))  # 140732135058432
+print(id(my_other_list))  # 140732135058432
+
+# because the copy copies the reference it is calle3d a SHALLOW copy
+# the original may be mutated through the new reference
+my_copied_list.append(4)
+print(my_list)  # [1, 2, 3, 4]
+print(my_copied_list)  # [1, 2, 3, 4]
+
+# way to go around it
+import copy
+my_deep_copied_list = copy.deepcopy(my_list)
+my_deep_copied_list.append(5)
+print(my_list)  # [1, 2, 3, 4] the original is unaffected
+print(my_deep_copied_list)  # [1, 2, 3, 4, 5]
